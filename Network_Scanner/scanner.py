@@ -16,7 +16,7 @@ def scan(ip):
     Sucess = scapy.srp(arp_request_broadcast, timeout=2, verbose=False)[0]
     print(Sucess.summary())
     
-    print("IP\t\t\tMAC Adress\n------------------------------------------------")
+    print("IP\t\t\tMAC Address\n------------------------------------------------")
     for element in Sucess:
         print(element[1].psrc + "\t\t" + element[1].hwsrc )
         #print(element[1].hwsrc)
